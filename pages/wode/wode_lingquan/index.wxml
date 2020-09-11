@@ -1,0 +1,23 @@
+<!--pages/wode/wode_lingquan/index.wxml-->
+<view wx:for="{{4}}">
+	<view class="listview">
+		<view class="leftview">
+    <text>5元</text>
+    <text class="youhuizi">优惠券</text>
+    </view>
+		<view class="rightview">
+			<view class="top">
+				<text class="middletext1">哇哈哈桶装水</text>
+			</view>
+			<view class="middletextview2">
+				<text class="middletext2">
+        满199减100（仅优惠商品适用）
+        </text>
+				<view class="lijilingqu">
+					<text >立即领取</text>
+				</view>
+			</view>
+		</view>
+	</view>
+
+</view>

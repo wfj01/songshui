@@ -1,0 +1,59 @@
+<!--pages/songshui/songshui_xiadan/index.wxml-->
+<!--选择配送产品-->
+
+<!-- 最外面的框 -->
+<view class="box">
+	<!-- 一个配送产品 -->
+	<view class="listone" wx:for="{{mydata}}" wx:key="index">
+		<!-- 左侧单选按钮 -->
+		<view class="left">
+			<view wx:if="{{item.ischecked}}" bindtap="UnSelected" data-id="{{item.id}}" class="xuanzekuang">
+				<text class="icon icon_danxuan1"></text>
+			</view>
+			<view wx:if="{{!item.ischecked}}" bindtap="UnSelected" data-id="{{item.id}}" class="xuanzekuang">
+				<text class="icon icon_danxuan"></text>
+			</view>
+		</view>
+		<!-- 右侧产品所有 -->
+		<view class="right">
+			<view class="right_top">
+				<view class="right_top_left">
+					<view class="mingzi">
+						{{item.name}}
+					</view>
+					<view class="jianjie">
+						容量：200毫升
+					</view>
+				</view>
+				<view class="right_top_right">
+					<image src="/image/tongzhuangshui01.png"></image>
+				</view>
+			</view>
+			<!-- 横杠分割线 -->
+
+			<view class="hr"> </view>
+			<!-- 钱加加减号 -->
+			<view class="right_bottom">
+				<view class="danjia">
+					{{item.price}}
+				</view>
+				<view class="jiajian">
+					<view class="jiajian_left" bindtap="jianfaClick" data-id="{{item.id}}">
+						<text class="icon icon_jianhao1"></text>
+					</view>
+					<view class="jiajian_center">
+						<text class="shuliang">{{item.number}}</text>
+					</view>
+					<view class="jiajian_right" bindtap="jiafaClick" data-id="{{item.id}}">
+						<text class="icon icon_-jiahao"></text>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>
+
+<view class="botton">
+	<view class="quxiao" bindtap="cancelClick">取消</view>
+	<view class="queding" bindtap="ascertainClick">确定</view>
+</view>

@@ -1,0 +1,41 @@
+<!--pages/wode/wode_wodekehu/index.wxml-->
+<view>
+	<!--顶部导航栏-->
+	<view class="swiper-tab">
+		<view class="tab-item {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">直销客户({{0}})</view>
+		<view class="tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">全部客户({{0}})</view>
+	</view>
+	<!--内容主体-->
+	<swiper class="swiper" current="{{currentTab}}" duration="200" bindchange="swiperChange">
+		<swiper-item>
+			<view class="list_one" wx:for="{{zhixiaokehu}}">
+				<view class="one">
+					<view class="one_left"> <image src="{{item.imageSrc}}"></image></view>
+					<view class="one_content">
+					<view>{{item.name}}</view>
+					<view>{{item.phone}}</view>
+					</view>
+					<view class="one_right">
+					<view>绑定时间</view>
+					<view>{{item.createdtime}}</view>
+					</view>
+				</view>
+			</view>
+		</swiper-item>
+		<swiper-item>
+			<view class="list_one" wx:for="{{quanbukehu}}">
+				<view class="one">
+					<view class="one_left"> <image src="../../../image/touxiang.png"></image></view>
+					<view class="one_content">
+					<view>{{item.name}}</view>
+					<view>{{item.phone}}</view>
+					</view>
+					<view class="one_right">
+					<view>绑定时间</view>
+					<view>{{item.createdtime}}</view>
+					</view>
+				</view>
+			</view>
+		</swiper-item>
+	</swiper>
+</view>

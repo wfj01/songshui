@@ -1,0 +1,32 @@
+<!--pages/wode/wode_shezhi/index.wxml-->
+
+<view class="tou">
+	<view class="touxiang">
+	
+		<image src="/image/touxiang.png"></image>
+
+	</view>
+	</view>
+<view class="gerenxinxi">
+
+	<view class="onetext">
+		<text class="lefttext">用户名</text>
+		<text class="lefttext">智喜</text>
+	</view>
+	<view class="hr"></view>
+	<view class="onetext">
+		<text class="lefttext">用户类型</text>
+		<text class="lefttext">个人</text>
+	</view>
+	<view class="hr"></view>
+	<view class="onetext">
+		<text class="lefttext">绑定手机号</text>
+		<text class="lefttext">13563678626</text>
+	</view>
+	
+	
+</view>
+
+<view class="middleview">
+		<text class="chongxinshouquan">重新授权</text>
+	</view>

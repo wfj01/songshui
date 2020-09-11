@@ -1,0 +1,149 @@
+.place-holder {
+    font-size:32rpx;
+}
+.box {
+    padding: 30rpx;
+}
+.one{
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    /* background: #fff; */
+    /* margin-bottom: 30rpx; */
+    border-radius: 8rpx;
+    padding-left: 30rpx;
+    padding-right: 30rpx;
+    box-sizing: border-box;
+}
+.one text{
+display: block;
+width: 150rpx;
+height: 100rpx;
+line-height: 100rpx;
+color: #999; 
+}
+.one input{
+    height: 100rpx;
+    line-height: 100rpx;
+}
+
+.wx-switch-input{width:42px !important;height:20px !important;}
+.wx-switch-input::before{width:41px !important;height: 20px !important;}
+.wx-switch-input::after{width: 18px !important;height: 18px !important;}
+.body-view {
+    line-height: 100rpx;
+}
+input{
+    border-bottom: 1px solid #eee;
+}
+
+body,
+page {
+  line-height: 1.5;
+  font-size: 32rpx;
+  color: #212121;
+  background-color: #fff;
+  outline: 0;
+}
+
+.one text.icon{
+position: absolute;
+right: 0;
+width: 50rpx;
+height: 100rpx;
+font-size: 32rpx;
+color: #666;
+}
+
+
+/* 底部按钮 */
+
+.bottom_menu {
+    box-shadow: 5rpx -25rpx 50rpx 5rpx #fff;
+    background: #fff;
+    height: 100rpx;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+
+
+
+}
+
+.new_work {
+    text-align: center;
+    display: block;
+    width: 260rpx;
+    margin: 0 auto;
+    padding: 0;
+    font-size: 30rpx;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 80rpx;
+    letter-spacing: 9rpx;
+    color: #ffffff;
+
+    height: 80rpx;
+    background-color: #26c68a;
+    border-radius: 10rpx;
+    margin: 0;
+    margin-top: 10rpx;
+    margin-right: 20rpx;
+    margin-left: 20rpx;
+}
+
+.butt {
+    width: 300rpx;
+}
+
+.bottom_left_top {
+    color: #333;
+    font-size: 30rpx;
+    display: block;
+    line-height: 80rpx;
+    height: 80rpx;
+    margin-top: 10rpx;
+    margin-left: 100rpx;
+
+}
+
+.bottom_left_top text {
+    margin-right: 30rpx;
+    color: #666;
+}
+
+.bottom_left_bottom {
+    display: block;
+    color: #666;
+    text-align: left;
+    font-size: 24rpx;
+    line-height: 40rpx;
+    height: 40rpx;
+    margin-left: 30rpx;
+}
+
+.bottom_left {
+    position: relative;
+}
+
+.bottom_left image {
+    position: absolute;
+    top: -50rpx;
+    width: 100rpx;
+    height: 160rpx;
+}
+
+.tixiananniu {
+    width: 690rpx;
+    background: #26c68a;
+    height: 80rpx;
+    margin: 0 auto;
+    border-radius: 10rpx;
+    color: #fff;
+    font-size: 30rpx;
+    text-align: center;
+    line-height: 80rpx;
+    margin-top: 40rpx;
+}

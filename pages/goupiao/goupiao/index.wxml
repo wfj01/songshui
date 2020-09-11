@@ -1,0 +1,17 @@
+<!--pages/goupiao/goupiao/index.wxml-->
+
+<view class="box">
+	<view class="list" >
+		<view class="list_one "  wx:for="{{mydata}}">
+			<view class="img">
+				<image class="imagestyle" src="{{item.imagesrc}}"></image>
+			</view>
+			<view class="textbox">
+				<view class="lname">{{item.name}}</view>
+				<view class="lzengsong">{{item.discount}}</view>
+				<view class="lpie">￥{{item.price}}元起</view>
+			</view>
+			<view class="mybtn" bindtap="xiangqingClick"> 充值 </view>
+		</view>
+	</view>
+</view>

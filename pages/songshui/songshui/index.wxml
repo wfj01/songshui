@@ -1,0 +1,75 @@
+<view>
+	<view class="dingbu">
+		<view class="dingbu_bg">
+			<swiper indicator-dots="true" autoplay="true" circular="true" indicator-active-color="white" indicator-color="rgba(255,255,255,0.5)" class="index_banner">
+				<swiper-item>
+					<image mode="scaleToFill" src="/image/index_banner01.png" />
+				</swiper-item>
+				<swiper-item>
+					<image mode="scaleToFill" src="/image/index_banner01.png" />
+				</swiper-item>
+				<swiper-item>
+					<image mode="scaleToFill" src="/image/index_banner01.png" />
+				</swiper-item>
+			</swiper>
+		</view>
+	</view>
+
+	<view class="mbody">
+		<view class="toptext">
+			<view class="textColor">
+				<text class="icon icon_icon- iconclass01"></text>
+				<text>快速送达</text>
+			</view>
+			<view class="textColor">
+				<text class="icon icon_zhengpinbaozhang2 iconclass01"></text>
+				<text>正品保障</text>
+			</view>
+			<view class="textColor">
+				<text class="icon icon_yunshupeisong iconclass01"></text>
+				<text>免费配送</text>
+			</view>
+		</view>
+	</view>
+
+	<view class="box1">
+		<view class="beijing">
+			<image src="/image/banner2.png"></image>
+		</view>
+		<text class="shengyu">剩余水票</text>
+		<view class="toptext2" bindtap="tapOneDialogButton">
+			<view class="toptext_left">
+				<text class="zhang">我还有</text>
+				<text class="zhangshu">{{waterquantity}}</text>
+				<text class="zhang">张水票</text>
+			</view>
+		</view>
+		<view class="toptext_right">
+			<text class="goupiao" bindtap="goupiaoClick">购票</text>
+		</view>
+	</view>
+	<view class="box2">
+		<text class="lijixiadan">立即下单</text>
+		<view class="pushtext1" bindtap="openaddress" >
+			<text class="pushtext01">配送地址</text>
+			<view class="peisongdizhi">
+				<text wx:if="{{dizhi==''}}" class="pushtext02">请选择配送地址</text>
+				<text wx:if="{{dizhi!=''}}" class="pushtext02">{{dizhi}}</text>
+				<text class="icon icon_you"></text>
+			</view>
+		</view>
+		<view class="hr"></view>
+		<view class="pushtext2">
+			<text class="pushtext01">配送产品</text>
+			<view bindtap="xuanzechanpin" class="xuanzechanpin">
+				<text wx:if="{{chanpin==''}}" class="pushtext02">请选择配送产品</text>
+				<text wx:if="{{chanpin!=''}}" class="pushtext02">{{chanpin}}</text>
+				<text class="icon icon_you"></text>
+			</view>
+		</view>
+		<view bindtap="lijipeisongClick">
+			<text  class="lijipeisong">立即配送</text>
+		</view>
+
+	</view>
+</view>

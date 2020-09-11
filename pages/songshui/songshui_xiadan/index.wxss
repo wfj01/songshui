@@ -1,0 +1,228 @@
+/* pages/songshui/songshui_xiadan/index.wxss */
+/*  重写 checkbox 样式  */
+/* 未选中的 背景样式 */
+checkbox .wx-checkbox-input{
+  border-radius: 50%;/* 圆角 */
+  width: 40rpx; /* 背景的宽 */
+  height: 40rpx; /* 背景的高 */
+}
+/* 选中后的 背景样式 （红色背景 无边框 可根据UI需求自己修改） */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked{
+  border: none;
+  background: red;
+}
+/* 选中后的 对勾样式 （白色对勾 可根据UI需求自己修改） */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before{
+  border-radius: 50%;/* 圆角 */
+  width: 40rpx;/* 选中后对勾大小，不要超过背景的尺寸 */
+  height: 40rpx;/* 选中后对勾大小，不要超过背景的尺寸 */
+  line-height: 40rpx;
+  text-align: center;
+  font-size:30rpx; /* 对勾大小 30rpx */
+  color:#fff; /* 对勾颜色 白色 */
+  background: transparent;
+  transform:translate(-50%, -50%) scale(1);
+  -webkit-transform:translate(-50%, -50%) scale(1);
+}
+
+.tupianviewstyle{
+  width: 100rpx ;
+  height: 100rpx;
+}
+
+.tupianstyle{
+  width: 100%;
+  height: 100%;
+}
+
+.one{
+  margin-bottom: 10rpx;
+  width: 100%;
+  height: 140rpx;
+  display: flex;
+  align-items: center;
+  padding: 30rpx;
+  background: #fff;
+  justify-content: space-between;
+  box-sizing: border-box;
+  border-bottom: 1rpx solid #eee;
+}
+.jiajian{
+  width: 200rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.botton{
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+}
+.quxiao{
+  width: 50%;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 32rpx;
+  background: #fff;
+  color: #666;
+}
+.queding{
+  width: 50%;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 32rpx;
+  background: #26c68a;
+  color: #fff;
+}
+
+.titleview{
+  font-weight: bold;
+}
+
+.middleview{
+  font-weight: bold;
+  color: crimson;
+}
+
+.iconStyle{
+  color: blue;
+}
+
+/* 桶装水图片 */
+.right_top_right{
+	width: 120rpx;
+  height: 120rpx;
+  overflow: hidden;
+  border-radius: 8rpx;
+  
+}
+.right_top_right image{
+width: 100%;
+height: 100%;
+}
+.box{
+  padding: 20rpx;
+}
+.listone{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 30rpx;
+  box-sizing: border-box;
+  background: #fff;
+  margin-bottom: 30rpx;
+  border-radius: 14rpx;
+  box-shadow: 0rpx 5rpx 5rpx 0rpx #eee;
+}
+.left{
+  width: 100rpx;
+}
+.xuanzekuang{
+  width: 100rpx;
+height: 100rpx;  
+line-height: 100rpx;
+text-align: center;
+margin-right: 30rpx;
+}
+
+.xuanzekuang text{
+
+  font-size: 40rpx;
+color: #aaa;
+}
+
+.right{
+  width: 530rpx;
+}
+.right_top{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30rpx;
+}
+.danjia{
+  color: #26c68a;
+  font-size: 30rpx;
+}
+.jianjie{
+  color: #999;
+  font-size: 28rpx;
+}
+.mingzi{
+  color: #333;
+  font-size: 32rpx;
+}
+
+.right_bottom{
+  display: flex;
+  justify-content: space-between;
+}
+
+.jiajian_left{
+  border: 1rpx solid #eee;
+  display: block;
+  width: 100rpx;
+  height: 50rpx;
+  border-radius:8rpx 0 0 8rpx ;
+ 
+  
+}
+.jiajian_left text{
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 50rpx;
+  color: #999;
+  font-size: 30rpx;
+}
+.jiajian_center{
+  border-top:1rpx solid #eee ;
+  border-bottom: 1rpx solid #eee;
+  height: 50rpx;
+  display: block;
+  line-height: 50rpx;
+  width: 100%;
+}
+.jiajian_center text{
+  text-align: center;
+  color: #999;
+  display: block;
+  height: 50rpx;
+  line-height: 50rpx;
+  width: 100%;
+}
+
+.jiajian_right{
+  border: 1rpx solid #26c68a;
+  display: block;
+  width: 100rpx;
+  height: 50rpx;
+  border-radius: 0 8rpx 8rpx  0 ;
+  background: #26c68a;                                                                                                                                                                                                               
+}
+
+.jiajian_right text{
+  text-align: center;
+  color: #fff;
+  display: block;
+  height: 50rpx;
+  line-height: 50rpx;
+  width: 100%;
+  font-size: 30rpx;
+}
+
+.xuanzekuang .icon_danxuan1{
+  color: #26c68a;
+}
+
+.hr {
+  width: 98%;
+  margin: auto;
+  text-align: center;
+  height: 1rpx;
+  background: #eee;
+  margin-bottom: 30rpx;
+}

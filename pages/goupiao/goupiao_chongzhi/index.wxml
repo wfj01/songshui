@@ -1,0 +1,46 @@
+<!--pages/goupiao/goupiao_chongzhi/index.wxml-->
+<view class="box">
+	<view class="taocanxiangqing">
+		<view class="biaoti">
+			套餐详情
+		</view>
+		<view class="hr"></view>
+		<view class="xiangqing">
+			<view class="left">
+				<view class="img">
+					<image src="/image/geren_banner01.png"></image>
+				</view>
+				<view>
+					<text class="lefttop">{{chanpinname}}</text>
+					<text>{{name}}</text>
+				</view>
+			</view>
+
+			<view class="right">
+				<text>￥{{totalPrice}}</text>
+			</view>
+		</view>
+		<view class="hr"></view>
+
+		<view class="xiaoji">
+			<view>
+				<text>小计 : </text> <text>套餐含桶数 </text> <text>{{totalnumber}}</text><text>桶 </text>
+			</view>
+			<view>￥{{totalPrice}}</view>
+		</view>
+	</view>
+	<view class="zhifufangshi">
+		<text>支付方式</text>
+		<text>微信支付</text>
+	</view>
+</view>
+
+<view class='bottom_menu'>
+	<view class='bottom_left'>
+		<view class='bottom_left_top'><text>合计</text><text>￥{{totalPrice}}</text></view>
+		<text class='bottom_left_bottom'>支付成功后套餐将存入电子票中</text>
+	</view>
+	<view class="butt">
+		<view bindtap="showModal" class='new_work'>提交订单</view>
+	</view>
+</view>

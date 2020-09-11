@@ -1,0 +1,49 @@
+<view class="box">
+	<view class="one">
+		<text>收货人</text>
+		<input placeholder-class="place-holder" placeholder="用户名"></input>
+	</view>
+	<view class="one">
+		<text>电话</text>
+		<input placeholder-class="place-holder" placeholder="手机号码或电话号码"></input>
+	</view>
+	<view class="one">
+		<text>省级</text>
+		<input placeholder-class="place-holder" placeholder="正在定位中..."></input>
+		<text class="icon icon_you"></text>
+	</view>
+	<view class="one">
+		<text>市级</text>
+		<input placeholder-class="place-holder" placeholder="正在定位中..."></input>
+		<text class="icon icon_you"></text>
+	</view>
+	<view class="one">
+		<text>区级</text>
+		<input placeholder-class="place-holder" placeholder="正在定位中..."></input>
+		<text class="icon icon_you"></text>
+	</view>
+	<view class="one">
+		<text>地址</text>
+		<input placeholder-class="place-holder" placeholder="正在定位中..."></input>
+		<text class="icon icon_you"></text>
+	</view>
+	<view class="one">
+		<text>门牌号</text>
+		<input placeholder-class="place-holder" placeholder="例: 2号楼105室"></input>
+	</view>
+	<view class="one">
+		<text>默认地址</text>
+		<view class="body-view">
+			<switch bindchange="switch2Change" />
+		</view>
+	</view>
+</view>
+<view class='bottom_menu'>
+	<view class='bottom_left'>
+		<image src='/image/boy.png'></image>
+		<view class='bottom_left_top'><text>点击右侧保存地址</text></view>
+	</view>
+	<view class="butt">
+		<view bindtap="baocun" class='new_work'>保存地址</view>
+	</view>
+</view>

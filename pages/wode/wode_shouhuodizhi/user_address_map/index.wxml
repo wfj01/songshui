@@ -1,0 +1,18 @@
+<!--pages/user_address_amp/index.wxml-->
+<map id="map" scale="14" latitude="{{lat}}" longitude="{{lng}}" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location ></map>
+<view class="location">
+    <image src="/static/images/mark.png" mode="widthFix" class="mark"></image>
+</view>
+<view class="wrap">
+    <view class="aui-content">
+        <view class="aui-list">
+            <view class="aui-list-item">
+                <view class="aui-list-item-content">
+                    <view class="aui-list-item-title">
+                    </view>
+                    <view class="aui-list-item-subtitle"></view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

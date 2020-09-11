@@ -1,0 +1,88 @@
+<!--pages/wode/wode_tuiguanyuan/index.wxml-->
+<view class="topgeren">
+	<view class="touceanniu">
+		<text class="icon icon_fenxiang1"></text>
+		分享给好友</view>
+	<view class="aiend">
+		<view class="touxiang">
+
+			<image src="/image/touxiang.png"></image>
+
+		</view>
+		<view class="rightview">
+			<text class="name">智喜</text>
+			<text class="tuiguangren">推荐人：暂无</text>
+		</view>
+		<view class="xuanfu">
+			<view>
+				<view class="shouyimiddle">
+					<view class="shouyimiddleleft ">
+						<text class="shouyitongyong">新增收益</text>
+						<text class="shouyitongyong shouyitongyongnumber ">0</text>
+					</view>
+					<view class="shouyimiddleright">
+						<text class="shouyitongyong">累计收益</text>
+						<text class="shouyitongyong shouyitongyongnumber">0</text>
+					</view>
+					<view class="shouyimiddleright">
+						<text class="shouyitongyong">可提佣金</text>
+						<text class="shouyitongyong shouyitongyongnumber">0</text>
+					</view>
+				</view>
+			</view>
+		</view>
+
+	</view>
+</view>
+
+<view class="box1">
+	<view class="beijing">
+		<image src="/image/tuiguangbanner01.png"></image>
+	</view>
+
+	<view class="toptext2">
+		<view class="toptext_left">
+			<text class="zhang">我的推广二维码</text>
+		</view>
+	</view>
+	<view class="toptext_right">
+		<text class="goupiao">生成</text>
+	</view>
+</view>
+
+<view class="box2">
+	<text class="lijixiadan">我的权益</text>
+	<view class="quanyi">
+		<view class="pushtext2">
+			<view class="pushtext01"> <text class="dian"></text> 推广佣金比</view>
+			<view bindtap="xuanzechanpin">
+				<text class="pushtext02">10%</text>
+			</view>
+		</view>
+	</view>
+	<view class="quanyi">
+		<view class="pushtext2">
+			<view class="pushtext01"><text  class="dian"></text>
+				团队佣金比
+			</view>
+			<view bindtap="xuanzechanpin">
+				<text class="pushtext02">0%</text>
+			</view>
+		</view>
+	</view>
+</view>
+
+<view class="tixiananniu">提现</view>
+
+
+
+<view class='bottom_menu'>
+
+	<view class='bottom_left'>
+		<image src='/image/boy.png'></image>
+		<view class='bottom_left_top'><text>昨日新增客户</text><text>0</text></view>
+	</view>
+	<view class="butt">
+		<view bindtap="showModal" class='new_work'>我的客户</view>
+	</view>
+</view>

@@ -1,0 +1,65 @@
+{
+  "pages": [
+    "pages/wode/wode/index",
+    "pages/songshui/songshui/index",
+    "pages/wode/wode_wodekehu/index",
+    "pages/wode/wode_shouhuodizhi/user_address_edit/index",
+    "pages/wode/wode_yatong/index",
+    "pages/songshui/songshui_peisong/index",
+    "pages/songshui/songshui_beizhu/index",
+    "pages/wode/wode_shouhuodizhi/user_address_index/index",
+    "pages/songshui/songshui_xiadan/index",
+    "pages/dingdan/dingdan/index",
+    "pages/goupiao/goupiao/index",
+    "pages/goupiao/goupiao_xiangqing/index",
+    "pages/goupiao/goupiao_chongzhi/index",
+    "pages/wode/wode_dianzipiao/index",
+    "pages/wode/wode_youhuiquan/index",
+    "pages/wode/wode_qiantong/index",
+    "pages/wode/wode_shouhuodizhi/user_address_map/index",
+    "pages/wode/wode_tuiguanyuan/index",
+    "pages/wode/wode_lingquan/index",
+    "pages/wode/wode_shezhi/index",
+    "pages/wode/wode_shouhuodizhi/user_address_add/index",
+    "pages/wode/wode_lianxi/index",
+    "pages/songshui/songshui_mingxi/index",
+    "pages/wode/wode_zhuanzeng/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#666",
+    "selectedColor": "#000",
+    "list": [
+      {
+        "pagePath": "pages/songshui/songshui/index",
+        "text": "首页",
+        "iconPath": "/image/dibutubiao02.png",
+        "selectedIconPath": "/image/dibutubiao01.png"
+      },
+      {
+        "pagePath": "pages/goupiao/goupiao/index",
+        "text": "购票",
+        "iconPath": "/image/goupiao02.png",
+        "selectedIconPath": "/image/goupiao01.png"
+      },
+      {
+        "pagePath": "pages/dingdan/dingdan/index",
+        "text": "订单",
+        "iconPath": "/image/dingdan02.png",
+        "selectedIconPath": "/image/dingdan01.png"
+      },
+      {
+        "pagePath": "pages/wode/wode/index",
+        "text": "我的",
+        "iconPath": "/image/gerenzhongxin02.png",
+        "selectedIconPath": "/image/gerenzhongxin01.png"
+      }
+    ]
+  }
+}

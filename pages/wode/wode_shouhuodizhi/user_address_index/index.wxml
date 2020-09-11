@@ -1,0 +1,34 @@
+<view class="box">
+	<view class="one" wx:for="{{mydata}}" wx:key="index">
+		<view>
+		<view  wx:if="{{item.hiddenName}}"   class="xuanzezhege" bindtap="Selectaddress" data-id="{{item.id}}">选择这个</view>
+		</view>
+		<view class="name"><text class="icon icon_weibiaoti-_huabanfuben"></text>名字 :{{item.name}}</view>
+		<view class="iphone"><text class="icon icon_dianhua"></text> 电话 :{{item.phone}}</view>
+		<view class="address"><text class="icon icon_dizhi"></text>地址 ：{{item.address}}</view>
+		<view class="hr"></view>
+		<view class="add_buttom">
+			<view class="left" bindtap="Selected" data-id="{{item.id}}">
+				<view class="xuanzekuang">
+					<text class="{{item.ischecked ? ' icon icon_danxuan1' : ' icon icon_danxuan'}}"></text>
+				</view>
+				<text wx:if="{{item.ischecked}}" class="morenzi">默认地址</text>
+				<text wx:if="{{!item.ischecked}}" class="morenzi">设为默认</text>
+			</view>
+			<view class="right">
+				<text class="shanchu">删除</text>
+				<text>编辑</text>
+			</view>
+		</view>
+	</view>
+	<view class="kong"></view>
+</view>
+<view class='bottom_menu'>
+	<view class='bottom_left'>
+		<image src='/image/boy.png'></image>
+		<view class='bottom_left_top'><text>点击右侧按钮添加新地址</text></view>
+	</view>
+	<view class="butt">
+		<view bindtap="openAdd" class='new_work'>新增地址</view>
+	</view>
+</view>

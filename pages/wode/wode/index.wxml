@@ -1,0 +1,92 @@
+<!--pages/wode/wode/index.wxml-->
+<view>
+	<view class="topbackGroup">
+		<view class="topname">喜之狼</view>
+	</view>
+	<view class="xuanfu">
+		<view class="touxiangview">
+		<image src="/image/touxiang.png"></image>
+		</view>
+		<view class="boxfirst" bindtap="dianzipiaoClick">
+			<view class="middleTextview2">{{Ticket}}0</view>
+			<view class="middleTextview">电子票</view>
+		</view>
+		<view class="boxfirst" bindtap="youhuiquanClick">
+			<view class="middleTextview2">{{Coupon}}0</view>
+			<view class="middleTextview"> 优惠券</view>
+		</view>
+		<view class="boxfirst" bindtap="yatongClick">
+			<view class="middleTextview2">{{Pledgebucket}}0</view>
+			<view class="middleTextview">押桶</view>
+		</view>
+		<view class="boxfirst" bindtap="qiantongClick">
+			<view class="middleTextview2">{{Pledgebucket}}0</view>
+			<view class="middleTextview qudiaoshu">欠桶</view>
+		</view>
+	</view>
+	<view class="middleview">
+		<view class="view01" id="01">
+			<view class="lefticon">
+				<text class="icon icon_ico_home_committed  icon01"></text>
+				<text class="textstyle">营业时间</text>
+			</view>
+			<view>
+				<text class="shijian">8:00-18:00</text>
+			</view>
+		</view>
+		<view class="view01" id="02" bindtap="openAddress">
+			<view class="lefticon">
+				<text class="icon icon_dizhi  icon02"></text>
+				<text class="textstyle">收货地址</text>
+			</view>
+			<view class="righticon">
+				<text class="icon icon_you"></text>
+			</view>
+		</view>
+		<view class="view01" id="03" bindtap="lingquanOnClick">
+			<view class="lefticon">
+				<text class="icon icon_youhuiquan  icon03"></text>
+				<text class="textstyle">领券中心</text>
+			</view>
+			<view class="righticon">
+				<text class="icon icon_you"></text>
+			</view>
+		</view>
+		<!-- <view class="view01" id="04">
+			<view class="lefticon">
+				<text class="icon icon_bhjticket  icon04"></text>
+				<text class="textstyle">转赠电子票</text>
+			</view>
+			<view class="righticon">
+				<text class="icon icon_you"></text>
+			</view>
+		</view> -->
+		<view class="view01" id="05" bindtap="opentuiguangyuan">
+			<view class="lefticon">
+				<text class="icon icon_zizhutuiguang icon05"></text>
+				<text class="textstyle">推广员中心</text>
+			</view>
+			<view class="righticon">
+				<text class="icon icon_you"></text>
+			</view>
+		</view>
+		<view class="view01" id="06" bindtap="openlianxi">
+			<view class="lefticon">
+				<text class="icon icon_duihua  icon06"></text>
+				<text class="textstyle">联系我们</text>
+			</view>
+			<view class="righticon">
+				<text class="icon icon_you"></text>
+			</view>
+		</view>
+		<view class="view01" id="07"  bindtap="shezhiClick">
+			<view class="lefticon">
+				<text class="icon icon_shezhi  icon07"></text>
+				<text class="textstyle">设置</text>
+			</view>
+			<view class="righticon">
+				<text class="icon icon_you"></text>
+			</view>
+		</view>
+	</view>
+</view>

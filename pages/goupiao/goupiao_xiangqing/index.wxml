@@ -1,0 +1,111 @@
+<import src="../../wxParse/wxParse.wxml" />
+<view class='img'>
+	<swiper indicator-dots="true" autoplay="true" circular="true" indicator-active-color="white" indicator-color="rgba(255,255,255,0.5)" class="image">
+		<swiper-item>
+			<image src="/image/index_banner01.png" />
+		</swiper-item>
+		<swiper-item>
+			<image src="/image/index_banner01.png" />
+		</swiper-item>
+		<swiper-item>
+			<image src="/image/index_banner01.png" />
+		</swiper-item>
+	</swiper>
+</view>
+<view class="toptextview">
+	<view class='activities_details_top'>
+		<view class='flex'>
+			<view>
+				<text class='title'>{{chanpinname}}</text>
+				<text class='iconr'>热销</text>
+			</view>
+
+		</view>
+		<view class='school' wx-if='{{csedata.schoolName==""||csedata.schoolName==null}}'>月售出： {{shouchu}}</view>
+	</view>
+	<view class='information'>
+		<view>
+			<view class='information_first_line'>
+				单价：
+				<view class='information_left'>
+					<text>￥{{unitPrice}}</text>
+				</view>
+				<view class='information-right'>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class='empty'></view>
+</view>
+<view class='tab'>
+	<view class='titleSel' data-idx='1'>
+		<text>详情</text>
+		<hr />
+	</view>
+</view>
+<view class='directory' wx:if="{{0 == currentIndex}}">
+	<view wx:for="{{chapters}}" wx:key="index">
+		<view class='chapters'>{{item.chapterName}}</view>
+	</view>
+</view>
+<view class='details'>
+	<view class='course_details_map'>
+		<image src="/image/geren_banner01.png"></image>
+		<template is="wxParse" data="{{wxParseData:article.nodes}}" />
+	</view>
+</view>
+<view class='bottom_empty'></view>
+<view class='bottom_menu'>
+	<view class='bottom_left'>
+		<image src='/image/boy.png'></image>
+		<text class='bottom_left_top'>温馨提示</text>
+		<text class='bottom_left_bottom'>支付成功后套餐将存入电子票中</text>
+	</view>
+	<view class="butt">
+		<view bindtap="showModal" class='new_work'>立即充值</view>
+	</view>
+</view>
+
+<!-- //点击下面这句话出现底部弹框 -->
+<view bindtap="clickme">点击我可以看到底部弹框的出现</view>
+
+<!--屏幕背景变暗的背景  -->
+<view class="commodity_screen" bindtap="hideModal" wx:if="{{showModalStatus}}"></view>
+<!--弹出框  -->
+<view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}">
+	<view class="gbox">
+		<view class="gtop">
+			<view class="gtop_img">
+				<image src="/image/touxiang_01.png"></image>
+			</view>
+			<view class="guigexuanze">
+				<view>
+					<text class="cname">{{chanpinname}}</text>
+				</view>
+				<view>
+					<text class="cjiage">合计￥{{totalPrice}}</text>
+				</view>
+			</view>
+			<view bindtap="hideModal" class="guanbi">
+				<text class="icon icon_guanbi"></text>
+			</view>
+		</view>
+
+		<view class="guige_list">
+			<view class="guige_list_box">
+				<view class="guige_list_name">规格</view>
+				<view>
+					<view class="xuanxiang">
+						<view wx:for="{{guige}}" wx:key='index'  class="{{index == guige_index?'this_one':''}}" 
+						data-id="{{item.id}}" 
+						data-index="{{index}}" 
+						bindtap="serviceSelection">{{item.name}}</view>
+					</view>
+				</view>
+			</view>
+		</view>
+		<view bindtap="chongzhi" class="butto">
+			确定
+		</view>
+	</view>
+</view>

@@ -1,0 +1,195 @@
+<!--pages/goupiao/goupiao_chongzhi/index.wxml-->
+<view class="box">
+	<view class="dizhi">
+		<text class="icon icon_dizhi"></text>
+		<view wx:for="{{addresslist}}" wx:key="index" bindtap="dizhiClick">
+			<view class="dianhuamingzi">
+				<text>{{item.name}}</text>
+				<text>{{item.phone}}</text>
+			</view>
+			<view class="dizhixiangqing">{{item.address}}</view>
+		</view>
+		<view class="you">
+			<text class="icon icon_you"></text>
+		</view>
+	</view>
+	<view class="taocanxiangqing">
+		<view class="biaoti">
+			套餐详情
+		</view>
+		<view class="hr"></view>
+		<view class="xiangqing" wx:for="{{chanpin}}" wx:key="index">
+			<view class="left">
+				<view class="img">
+					<image src="/image/geren_banner01.png"></image>
+				</view>
+				<view>
+					<text class="lefttop">{{item.name}}</text>
+					<!-- 钱加加减号 -->
+					<view class="right_bottom">
+						<view class="danjia">
+							￥{{item.price}}元
+						</view>
+						<view class="jiajian">
+							<view class="jiajian_left" bindtap="jianfaClick" data-id="{{item.id}}">
+								<text class="icon icon_jianhao1"></text>
+							</view>
+							<view class="jiajian_center">
+								<text class="shuliang">{{item.number}}</text>
+							</view>
+							<view class="jiajian_right" bindtap="jiafaClick" data-id="{{item.id}}">
+								<text class="icon icon_-jiahao"></text>
+							</view>
+						</view>
+					</view>
+				</view>
+			</view>
+
+		</view>
+		<view class="hr"></view>
+		<view class="xiaoji" bindtap="dianzipiao_showModal">
+			<view>
+				<text>电子票抵扣 : </text>
+			</view>
+			<view>暂无电子票</view>
+		</view>
+		<view class="xiaoji" bindtap="youhuiquan_showModal">
+			<view>
+				<text>优惠券: </text>
+			</view>
+			<view>无可用红包</view>
+		</view>
+		<view class="xiaoji">
+			<view>
+				<text>费用小计 : </text>
+			</view>
+			<view>￥{{totalprice}}</view>
+		</view>
+		<view class="xiaoji" bindtap="beizhuclick">
+			<view class="beizhuititle">
+				<text>备注</text>
+			</view>
+			<view class="beizhutext">{{contentStr}} <text class="icon icon_you"></text></view>
+			<!-- <view>请输入备注 <text class="icon icon_you"></text></view> -->
+		</view>
+
+		<view class="xiaoji">
+			<view>
+				<text>押金(桶)</text>
+				<text class="margin"></text>
+				<text class="icon icon_wj-mxjl"></text>
+				<text>押金明细</text>
+			</view>
+			<view>
+				<view class="body-view">
+					<switch bindchange="switch2Change" />
+				</view>
+			</view>
+		</view>
+
+		<view class=" xiaoji xiaoji2">
+			<text class="huanhang">首次订水需要缴纳押金，有空桶关闭即可，按需控制好定水量，增加永通可能需增加押金！</text>
+		</view>
+
+		<view class="xiaoji">
+			<view>
+				<text>配送费 : </text>
+			</view>
+			<view>￥{{peisongfei}}</view>
+		</view>
+	</view>
+
+	<view class="zhifufangshi">
+		<text>支付方式</text>
+		<text>微信支付</text>
+	</view>
+</view>
+
+<view class="kong"></view>
+
+<view class='bottom_menu'>
+	<view class='bottom_left'>
+		<view class='bottom_left_top'><text>合计</text><text>￥{{totalnumber}}</text></view>
+	</view>
+	<view class="butt">
+		<view bindtap="showModal" class='new_work'>提交订单</view>
+	</view>
+</view>
+
+<!--屏幕背景变暗的背景  -->
+<view class="commodity_screen" bindtap="hideModal" wx:if="{{showModalStatus}}"></view>
+<!--弹出框  -->
+<view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}">
+	<view class="gbox">
+		<view class="gtop">
+			<view class="gtop_img">
+				<image src="/image/touxiang_01.png"></image>
+			</view>
+			<view class="guigexuanze">
+				<view>
+					<text class="cname">巴马丽琅天然矿泉水</text>
+				</view>
+				<view>
+					<text class="cjiage">￥0.00~5.00</text>
+				</view>
+			</view>
+			<view bindtap="hideModal" class="guanbi">
+				<text class="icon icon_tubiao-"></text>
+			</view>
+		</view>
+		<view class="hr"></view>
+		<view class="guige_list" wx:for="{{orderfrom}}" wx:key="{{index}}">
+			<view class="guige_list_box">
+				<view class="guige_list_name">{{item.name}}</view>
+				<view class="tongyong">
+					<view class="xuanxiang" wx:for="{{item.mydata}}" wx:key="{{index2}}" wx:for-item="cell">
+						<view class="{{cell.isChecked == true?'this_one':''}}" data-id="{{cell.id}}" data-ida="{{item.ida}}" bindtap="serviceSelection">
+							{{cell.name}}
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+		<view bindtap="chongzhi" class="butto">
+			确定
+		</view>
+	</view>
+</view>
+
+<!--电子票-->
+<!--屏幕背景变暗的背景  -->
+<view class="commodity_screen" bindtap="dianzipiao_hideModal" wx:if="{{dianzipiao_showModalStatus}}"></view>
+<!--弹出框  -->
+<view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{dianzipiao_showModalStatus}}">
+	<view class="gbox">
+		<view class="dianzipiao_title">
+			<view class="dianzipiao_title_text1">可使用电子票</view>
+			<view class="dianzipiao_title_text2">使用说明
+				<view bindtap="dianzipiao_hideModal">
+					<text class="icon icon_tubiao-">
+						</text>
+				</view>
+			</view>
+		</view>
+		<view class="hr"></view>
+	</view>
+</view>
+
+<!--优惠券-->
+<!--屏幕背景变暗的背景  -->
+<view class="commodity_screen" bindtap="youhuiquan_hideModal" wx:if="{{youhuiquan_showModalStatus}}"></view>
+<!--弹出框  -->
+<view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{youhuiquan_showModalStatus}}">
+	<view class="gbox">
+		<view class="dianzipiao_title">
+			<view class="youhuiquan_title_text1">优惠券</view>
+			<view class="youhuiquan_title_text2">使用说明
+				<view bindtap="youhuiquan_hideModal">
+					<text class="icon icon_tubiao-">
+						</text>
+				</view>
+			</view>
+		</view>
+		<view class="hr"></view>
+	</view>
+</view>

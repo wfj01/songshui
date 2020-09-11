@@ -1,0 +1,52 @@
+<!--pages/wode/wode_qiantong/index.wxml-->
+<view>
+	<view class="toppadding">
+		<view class="topview">
+			<view class="leftview">
+				<view>
+					<view class="textclass">
+						0个
+					</view>
+					<view class="textclass">
+						欠桶列表
+					</view>
+				</view>
+			</view>
+			<view class="rightview">
+				<view class="textclass">
+					0元
+				</view>
+				<view class="textclass">
+					押金
+				</view>
+			</view>
+		</view>
+	</view>
+
+	<view class="qiantongwaibu">
+		<view class="qiantongliebiao">
+			欠桶列表
+		</view>
+	</view>
+	<view>
+	</view>
+	<view  wx:if="{{dataList.length!=0}}" class="one" wx:for="{{listtext}}">
+		<view class="tupianviewstyle">
+			<image class="tupianstyle" src="{{item.imagesrc}}"></image>
+		</view>
+		<view class="titleview">{{item.title}}</view>
+		<view class="middleview">{{item.price}}</view>
+		<view class="jiajian">
+			<text>{{item.number}}</text>
+			<text>桶</text>
+		</view>
+	</view>
+
+<view wx:if="{{dataList.length==0}}">
+<view class="tu">
+ <image src="/image/zanwu.png"> </image>
+</view>
+ <text class="zi">暂无数据</text>
+</view>
+
+</view>

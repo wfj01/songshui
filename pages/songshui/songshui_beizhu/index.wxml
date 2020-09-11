@@ -1,0 +1,8 @@
+<!--pages/songshui/songshui_beizhu/index.wxml-->
+<view class="box">
+	<view class='textarea-Style'>
+		<textarea class="textarea" placeholder='请输入文字' value='{{contentStr}}' bindinput="getWords" maxlength='{{maxTextLen}}'></textarea>
+		<view class='contentNumStyle'>{{textLen}}/{{maxTextLen}}</view>
+	</view>
+	<view class="savebtn" bindtap="SavebtnClick">保存</view>
+</view>

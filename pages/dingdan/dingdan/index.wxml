@@ -1,0 +1,89 @@
+<!--pages/order/order.wxml-->
+<view class='container'>
+	<!--Tab布局-->
+	<view class='title'>
+		<view class='titleSel' bindtap='titleClick' data-idx='0'>
+			<text>商品订单</text>
+			<hr class="{{0 == currentIndex ? 'headerLineSel' : 'headerLineUnsel'}}" />
+		</view>
+		<view class='titleSel' bindtap='titleClick' data-idx='1'>
+			<text>充值订单</text>
+			<hr class="{{1 == currentIndex ? 'headerLineSel' : 'headerLineUnsel'}} " />
+		</view>
+	</view>
+	<view class='title_empty'></view>
+	<!--内容布局-->
+	<swiper class='swiper' bindchange='pagechange' current='{{currentIndex}}'>
+
+		<!--  商品订单-->
+		<swiper-item class='swiper' class='swiper'>
+			<view class='time_limited_courses'>
+				<view class='time_limited_courses_li'>
+					<view wx:for="{{shoppingdata}}" wx:key='index' class="one">
+						<view class='order_top'>
+							<text class='icon icon_wj-mxjl'> 订单编号 {{item.Orderno}}</text>
+						</view>
+						<view class='hr'> </view>
+						<view class='shotgun'>
+							<view class='shotgun_image'>
+								<image src='{{item.imagesrc}}'></image>
+							</view>
+							<view class='shotgun_text'>
+								<view class='shotgun_text_top'>
+									<text class='shotgun_name'>{{item.chanpinname}}</text>
+									<text class='shotgun_summary1'>{{item.chanpinleixing}}</text>
+									<text class='shotgun_summary2'>{{item.creationtime}}</text>
+									<view class='shotgun_text_bottom'>
+										<view class='shotgun_text_bottom_left'>
+											<view class='shotgun_price'>
+												<text class='discount_price'>￥{{item.totalprice}}</text></view>
+										</view>
+										<view class='shotgun_text_bottom_right' bindtap='order_successful' wx:if="true">
+											<text>{{item.Orderstatus}}</text>
+										</view>
+									</view>
+								</view>
+							</view>
+						</view>
+					</view>
+				</view>
+			</view>
+		</swiper-item>
+
+
+		<!--    充值订单-->
+		<swiper-item class='swiper' class='swiper'>
+			<view class='time_limited_courses'>
+				<view class='time_limited_courses_li'>
+					<view wx:for="{{rechargedata}}" wx:key='index' class="one">
+						<view class='order_top'>
+							<text class='icon icon_wj-mxjl'> 订单编号 {{item.Orderno}}</text>
+						</view>
+						<view class='hr'> </view>
+						<view class='shotgun'>
+							<view class='shotgun_image'>
+								<image src='{{item.imagesrc}}'></image>
+							</view>
+							<view class='shotgun_text'>
+								<view class='shotgun_text_top'>
+									<text class='shotgun_name'>{{item.chanpinname}}</text>
+									<text class='shotgun_summary1'>{{item.chanpinshuoming}}</text>
+									<text class='shotgun_summary2'>{{item.creationtime}}</text>
+									<view class='shotgun_text_bottom'>
+										<view class='shotgun_text_bottom_left'>
+											<view class='shotgun_price'>
+												<text class='discount_price'>￥{{item.totalprice}}</text></view>
+										</view>
+										<view class='shotgun_text_bottom_right' bindtap='order_successful' wx:if="true">
+											<text>{{item.Orderstatus}}</text>
+										</view>
+									</view>
+								</view>
+							</view>
+						</view>
+					</view>
+				</view>
+			</view>
+		</swiper-item>
+	</swiper>
+</view>

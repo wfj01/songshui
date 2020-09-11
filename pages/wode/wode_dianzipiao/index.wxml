@@ -1,0 +1,46 @@
+<!--pages/wode/wode_dianzipiao/index.wxml-->
+<view class="booy">
+	<view class="one">
+		<image src="../../../image/dianzipiao01.png" />
+		<view class="topview">
+			<view>
+				<view class="toptext titletext">
+					上帝之泉
+				</view>
+			</view>
+			<view>
+				<view class="toptext">
+					山东点萌信息科技有限公司
+				</view>
+			</view>
+		</view>
+	</view>
+</view>
+<!-- <view class="box">
+			<view>
+				<view>
+					上帝之泉
+				</view>
+				<view>
+					电子票
+				</view>
+			</view>
+			<view>
+				<view class="toptext">
+        山东点萌信息科技有限公司
+        </view>
+			</view>
+		</view>
+		<view class="middletext">
+			<view class="righttext">
+				<text class="amount">30</text>
+				<text class="company">元</text>
+			</view>
+		</view>
+		<view>
+			仅限当前水桶项目
+		</view>
+	</view>
+</view>
+<text>无可用电子票</text>
+  <view class="chongzhi" bindtap="chongzhiClick"><view>充值</view></view> --> 
